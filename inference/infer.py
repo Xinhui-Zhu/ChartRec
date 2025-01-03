@@ -7,6 +7,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import transformers
 import torch
 from pprint import pprint
+os.environ['HF_HOME'] = '/proj/arise/arise/xz3276/data'
 
 
 def load_data(args, filename):
@@ -30,7 +31,7 @@ def load_data(args, filename):
             prompts.append(prompt)
         print('qwen2:', prompts[0])
 
-    elif 'llama-3' in args.base_model.lower() or 'dpsk' in args.base_model.lower():
+    elif 'llama-3' in args.base_model.lower() or 'llama3' in args.base_model.lower() or 'dpsk' in args.base_model.lower():
         prompts = []
         tokenizer = AutoTokenizer.from_pretrained(args.base_model)
 
@@ -48,7 +49,7 @@ def run(args):
     sampling_params = vllm.SamplingParams(n = args.sample_n, temperature=args.temperature, top_p=0.95, max_tokens=8000)
 
     print("args:", args)
-    model = vllm.LLM(model=args.base_model, tensor_parallel_size=2, trust_remote_code=True)
+    model = vllm.LLM(model=args.base_model, tensor_parallel_size=4, trust_remote_code=True, gpu_memory_utilization=0.95)
 
     fnames = [x for x in os.listdir(args.data_path) if x.endswith('.jsonl')]
     for filename in fnames:
@@ -62,11 +63,14 @@ def run(args):
         
         for idx, output in enumerate(outputs):
             prompt = output.prompt
-            generated_texts = [item.text for item in output.outputs ]
+            # print(len(output.outputs))
+            # print(type(output.outputs))
+            generated_texts = [item.text for item in output.outputs]
 
             raw_datas[idx]["prediction"] = generated_texts
 
-
+        if not os.path.exists(args.outdir):
+            os.mkdir(args.outdir)
         save_path = os.path.join(args.outdir, args.base_model.split('/')[-1]+'_'+filename.split('.')[0]+'.jsonl')
 
         with open(save_path, 'w') as f:

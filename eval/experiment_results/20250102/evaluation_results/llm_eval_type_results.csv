@@ -1,0 +1,5 @@
+model_name	prompt_type	NumericalReasoning	FactChecking	Visualization	DataAnalysis
+TableLLM-Llama3.1-8B	PoT	28.51	25.69	44.0	20.63
+TableLLM-Llama3.1-8B	DP	17.9	63.79	24.0	29.81
+TableLLM-Llama3.1-8B	TCoT	30.55	68.09	24.0	33.39
+TableLLM-Llama3.1-8B	SCoT	17.44	65.7	20.0	29.77

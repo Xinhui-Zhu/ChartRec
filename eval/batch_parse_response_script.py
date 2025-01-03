@@ -7,6 +7,7 @@ from eval.chat_metric_utils import *
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import argparse
 from wrapt_timeout_decorator import *
 
 
@@ -19,6 +20,7 @@ def execute(c):
 
 def parse_dp_prediction(prediction):
     pattern = r"Final Answer: (.+)"
+    # print(prediction)
     try:
         match = re.search(pattern, prediction)
         if match:
@@ -26,6 +28,7 @@ def parse_dp_prediction(prediction):
         else:
             return ''
     except Exception as e:
+        # print(e)
         return ''
 
 
@@ -56,7 +59,7 @@ def parse_code_output_prediction(prediction):
 def build_chart_eval_code(sample):
     answer = sample['answer']
     chart_type = sample['chart_type']
-    prediction = sample['prediction']
+    prediction = sample['prediction'][0]
 
     python_code = parse_python_code(prediction)
 
@@ -175,9 +178,12 @@ def parse_chart_code_then_exec(sample):
 if __name__ == '__main__':
     # ==== Global settings ====
     RPOJECT_ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-    exp_version = '20240730_hf'
-    INFERENCE_RESULT_DIR = f'{RPOJECT_ROOT_DIR}/experiment_results/{exp_version}/inference_results'
-    PARSED_RUSULT_DIR = f'{RPOJECT_ROOT_DIR}/experiment_results/{exp_version}/parsed_results'
+    parser = argparse.ArgumentParser(description='Parameters')
+    parser.add_argument("--exp_version", type=str)
+    args = parser.parse_args()
+    # INFERENCE_RESULT_DIR = f'{RPOJECT_ROOT_DIR}/experiment_results/{exp_version}/inference_results'
+    INFERENCE_RESULT_DIR = f'{RPOJECT_ROOT_DIR}/experiment_results/{args.exp_version}/outputs_size'
+    PARSED_RUSULT_DIR = f'{RPOJECT_ROOT_DIR}/experiment_results/{args.exp_version}/parsed_results'
 
     # ==== Load inference results ====
     process_models = []
@@ -205,7 +211,7 @@ if __name__ == '__main__':
             for result in inference_results:
                 table = result['table']
                 table = json.loads(table)
-                prediction = result['prediction']
+                prediction = result['prediction'][0]
                 if prompt_type == 'SCoT' or prompt_type == 'TCoT' or prompt_type == 'DP':
                     qtype = result['qtype']
                     if qtype == 'Visualization':

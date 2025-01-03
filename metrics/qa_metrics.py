@@ -2,7 +2,10 @@
 import os
 import sys
 
-from datasets import load_metric,list_metrics
+# from datasets import load_metric,list_metrics
+from evaluate import load as load_metric
+from evaluate import list_evaluation_modules as list_metrics
+
 from metrics.base_metric import BaseMetric
 import re
 import string

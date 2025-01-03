@@ -2,6 +2,7 @@ from utils.file_util import read_json_file, write_json_to_file, iter_file_from_d
 import os
 from metrics.qa_metrics import QAMetric
 import pandas as pd
+import argparse
 
 PROJ_ROOT = os.path.dirname(os.path.abspath(__file__))
 global PARSED_RUSULT_DIR
@@ -311,9 +312,12 @@ def eval_by_overall(categoried_llm_inference_results, qa_metric, metric_name='RO
 
 
 if __name__ == '__main__':
-    exp_version = '20240730_hf'
-    PARSED_RUSULT_DIR = f'{PROJ_ROOT}/experiment_results/{exp_version}/parsed_results'
-    EVAL_RESULT_DIR = f'{PROJ_ROOT}/experiment_results/{exp_version}/evaluation_results'
+    parser = argparse.ArgumentParser(description='Parameters')
+    parser.add_argument("--exp_version", type=str)
+    args = parser.parse_args()
+    
+    PARSED_RUSULT_DIR = f'{PROJ_ROOT}/experiment_results/{args.exp_version}/parsed_results'
+    EVAL_RESULT_DIR = f'{PROJ_ROOT}/experiment_results/{args.exp_version}/evaluation_results'
     metric_name = 'ROUGE-L'
     eval_models = []
 
