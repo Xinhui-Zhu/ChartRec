@@ -5,9 +5,8 @@ export NCCL_SOCKET_IFNAME="lo"
 
 MODEL_PATH='deepseek-ai/deepseek-coder-7b-base-v1.5'
 
-# DATA_PATH='./data/v2/trainset_size_exp/TableBench_instructions_trainset_3904.jsonl'
 # DATA_PATH='./data/v2/train/TableInstruct_instructions.jsonl'
-DATA_PATH='./data/v2/train'
+DATA_PATH='./data/v3/train'
 SAVE_PATH='./ckpt/dpsk-coder-v2/'
 
 CUDA_VISIBLE_DEVICES="0,1,2,3" python -m torch.distributed.launch --master_addr ${MASTER_ADDR} --master_port ${MASTER_PORT} --nproc_per_node=4 --use_env train/train_llama3.py \

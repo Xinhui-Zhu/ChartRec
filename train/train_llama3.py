@@ -135,10 +135,11 @@ class SupervisedDataset(Dataset):
         else:
             paths = [x for x in os.listdir(data_path) if x.endswith('.jsonl')]
             for pa in paths:
+                print("file name:", pa)
                 lines = open(os.path.join(data_path, pa)).readlines()
                 lines = [json.loads(x) for x in lines if x.strip()]
                 list_data_dict += lines 
-                
+
         print('data cnt:', len(list_data_dict))
         # prompt_input, prompt_no_input, prompt_cot = PROMPT_DICT["prompt_input"], PROMPT_DICT["prompt_no_input"],PROMPT_DICT["prompt_input_cot"]
         sources = []
@@ -179,6 +180,7 @@ class DataCollatorForSupervisedDataset(object):
         sources = []
         targets = []
         for instance in instances:
+            # print(instance.keys())
             source = instance['input_ids']
             target = instance['labels']
             sources.append(source)
@@ -206,21 +208,24 @@ def make_supervised_data_module(tokenizer: transformers.PreTrainedTokenizer, dat
 def train():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
-    wandb.init(
-        project="ChartRec",
-        # name="experiment_name",  
-        config={
-            "epochs": training_args.num_train_epochs,
-            "learning_rate": training_args.learning_rate,
-            "batch_size": training_args.per_device_train_batch_size,
-            "gradient_accumulation_steps": training_args.gradient_accumulation_steps,
-        }
-    )
+    if training_args.local_rank == 0:
+        wandb.init(
+            project="ChartRec",
+            # name="experiment_name",  
+            config={
+                "epochs": training_args.num_train_epochs,
+                "learning_rate": training_args.learning_rate,
+                "batch_size": training_args.per_device_train_batch_size,
+                "gradient_accumulation_steps": training_args.gradient_accumulation_steps,
+                "gradient_accumulation_steps": data_args.data_path,
+            }
+        )
 
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
     )
+    # model = torch.compile(model)
 
     tokenizer = transformers.AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,

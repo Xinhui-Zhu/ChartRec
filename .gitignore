@@ -123,3 +123,4 @@ table.json
 
 data/
 wandb/
+ckpt/
