@@ -9,7 +9,8 @@ import transformers
 from torch.utils.data import Dataset
 from transformers import Trainer
 import json
-import wandb
+import deepspeed
+
 
 def _make_r_io_base(f, mode: str):
     if not isinstance(f, io.IOBase):
@@ -47,7 +48,10 @@ class TrainingArguments(transformers.TrainingArguments):
         metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
     )
     overwrite_output_dir: bool = field(default=False)
-
+    deepspeed: Optional[str] = field(
+        default=None,
+        metadata={"help": "Path to DeepSpeed config file"}
+    )
 
 def safe_save_model_for_hf_trainer(trainer: transformers.Trainer, output_dir: str):
     """Collects the state dict and dump to disk."""
@@ -127,18 +131,15 @@ class SupervisedDataset(Dataset):
         super(SupervisedDataset, self).__init__()
         logging.warning("Loading data...")
         list_data_dict = []
-        
-        if data_path.endswith('.jsonl'):
-            with open(data_path) as f:
-                lines = f.readlines()
-            list_data_dict = [json.loads(x) for x in lines]
-        else:
-            paths = [x for x in os.listdir(data_path) if x.endswith('.jsonl')]
-            for pa in paths:
-                lines = open(os.path.join(data_path, pa)).readlines()
-                lines = [json.loads(x) for x in lines if x.strip()]
-                list_data_dict += lines 
-                
+        # paths = [x for x in os.listdir(data_path) if x.endswith('.jsonl')]
+        # for pa in paths:
+        #     lines = open(os.path.join(data_path, pa)).readlines()
+        #     lines = [json.loads(x) for x in lines if x.strip()]
+        #     list_data_dict += lines 
+        with open(data_path) as f:
+            lines = f.readlines()
+        list_data_dict = [json.loads(x) for x in lines]
+
         print('data cnt:', len(list_data_dict))
         # prompt_input, prompt_no_input, prompt_cot = PROMPT_DICT["prompt_input"], PROMPT_DICT["prompt_no_input"],PROMPT_DICT["prompt_input_cot"]
         sources = []
@@ -206,16 +207,9 @@ def make_supervised_data_module(tokenizer: transformers.PreTrainedTokenizer, dat
 def train():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
-    wandb.init(
-        project="ChartRec",
-        # name="experiment_name",  
-        config={
-            "epochs": training_args.num_train_epochs,
-            "learning_rate": training_args.learning_rate,
-            "batch_size": training_args.per_device_train_batch_size,
-            "gradient_accumulation_steps": training_args.gradient_accumulation_steps,
-        }
-    )
+
+    # DeepSpeed 配置文件路径
+    training_args.deepspeed = "ds_config.json"
 
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
@@ -236,13 +230,21 @@ def train():
             model=model,
         )
 
+    # 数据模块
     data_module = make_supervised_data_module(tokenizer=tokenizer, data_args=data_args)
-    trainer = Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
+
+    # Trainer 初始化，传递 DeepSpeed 参数
+    trainer = Trainer(
+        model=model,
+        tokenizer=tokenizer,
+        args=training_args,
+        **data_module
+    )
+
+    # 开始训练
     trainer.train()
     trainer.save_state()
     safe_save_model_for_hf_trainer(trainer=trainer, output_dir=training_args.output_dir)
-    wandb.finish()
-
 
 if __name__ == "__main__":
     train()
