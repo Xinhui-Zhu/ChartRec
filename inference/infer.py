@@ -70,7 +70,7 @@ def run(args):
             raw_datas[idx]["prediction"] = generated_texts
 
         if not os.path.exists(args.outdir):
-            os.mkdir(args.outdir)
+            os.makedirs(args.outdir, exist_ok=True)
         save_path = os.path.join(args.outdir, args.base_model.split('/')[-1]+'_'+filename.split('.')[0]+'.jsonl')
 
         with open(save_path, 'w') as f:

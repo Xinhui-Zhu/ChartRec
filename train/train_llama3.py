@@ -47,6 +47,7 @@ class TrainingArguments(transformers.TrainingArguments):
         metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
     )
     overwrite_output_dir: bool = field(default=False)
+    resume_from_checkpoint: Optional[str] = field(default=None)
 
 
 def safe_save_model_for_hf_trainer(trainer: transformers.Trainer, output_dir: str):
@@ -243,7 +244,10 @@ def train():
 
     data_module = make_supervised_data_module(tokenizer=tokenizer, data_args=data_args)
     trainer = Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
-    trainer.train()
+    if training_args.resume_from_checkpoint:
+        trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+    else:
+        trainer.train()
     trainer.save_state()
     safe_save_model_for_hf_trainer(trainer=trainer, output_dir=training_args.output_dir)
     wandb.finish()

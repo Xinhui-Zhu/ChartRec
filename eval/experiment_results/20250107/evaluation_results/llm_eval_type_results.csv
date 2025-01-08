@@ -1,0 +1,5 @@
+model_name	prompt_type	NumericalReasoning	FactChecking	Visualization	DataAnalysis
+checkpoint-300	DP	15.54	59.7	20.0	29.79
+checkpoint-300	PoT	25.2	48.26	20.0	16.11
+checkpoint-300	SCoT	16.54	61.7	22.0	28.35
+checkpoint-300	TCoT	31.18	59.51	26.0	28.26
