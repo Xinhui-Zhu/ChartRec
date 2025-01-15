@@ -1,5 +1,0 @@
-model_name	prompt_type	NumericalReasoning_Aggregation	FactChecking_MatchBased	Visualization_ChartGeneration	DataAnalysis_ImpactAnalysis	DataAnalysis_CausalAnalysis	NumericalReasoning_Multi-hop NumericalReasoing	FactChecking_Multi-hop FactChecking	NumericalReasoning_Counting	DataAnalysis_DescriptiveAnalysis	DataAnalysis_AnomalyDetection	NumericalReasoning_Domain-Specific	NumericalReasoning_Time-basedCalculation	NumericalReasoning_ArithmeticCalculation	DataAnalysis_CorrelationAnalysis	NumericalReasoning_Ranking	DataAnalysis_TrendForecasting	DataAnalysis_StatisticalAnalysis	NumericalReasoning_Comparison
-TableLLM-Llama3.1-8B	PoT	30.0	34.78	44.0	18.6	23.13	12.55	17.33	56.0	11.34	0.88	6.12	24.47	28.0	80.75	26.98	6.93	2.0	42.63
-TableLLM-Llama3.1-8B	DP	4.0	83.81	24.0	39.1	38.43	1.96	45.07	14.0	26.05	34.81	24.05	16.31	8.0	48.73	45.5	18.3	4.0	30.38
-TableLLM-Llama3.1-8B	TCoT	10.0	85.97	24.0	49.69	44.08	8.82	51.15	26.0	30.9	30.3	35.32	32.27	26.0	49.54	57.15	17.41	12.55	49.43
-TableLLM-Llama3.1-8B	SCoT	2.0	82.85	20.0	42.53	48.44	1.96	49.43	20.0	27.45	19.32	26.14	13.83	6.0	51.65	35.49	12.12	8.0	35.73

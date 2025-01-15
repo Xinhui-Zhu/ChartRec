@@ -1,0 +1,23 @@
+{
+    "TableLLM-Llama3.1-8B/PoT": {
+        "total": 886,
+        "MIX_Metric": 26.12,
+        "ECR@1": 73.93,
+        "Parse@1": 46.05
+    },
+    "TableLLM-Llama3.1-8B/DP": {
+        "total": 886,
+        "MIX_Metric": 27.95,
+        "Parse@1": 97.97
+    },
+    "TableLLM-Llama3.1-8B/TCoT": {
+        "total": 886,
+        "MIX_Metric": 35.29,
+        "Parse@1": 96.73
+    },
+    "TableLLM-Llama3.1-8B/SCoT": {
+        "total": 886,
+        "MIX_Metric": 27.71,
+        "Parse@1": 96.5
+    }
+}

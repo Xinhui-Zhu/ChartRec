@@ -1,5 +1,0 @@
-model_name	prompt_type	overall	Parse@1
-checkpoint-300	DP	26.1	98.31
-checkpoint-300	PoT	23.87	44.02
-checkpoint-300	SCoT	26.37	91.2
-checkpoint-300	TCoT	32.77	94.36

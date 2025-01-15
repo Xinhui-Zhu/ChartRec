@@ -1,0 +1,5 @@
+model_name	prompt_type	NumericalReasoning	FactChecking	Visualization	DataAnalysis
+checkpoint-900	DP	18.1	70.23	26.0	29.9
+checkpoint-900	SCoT	22.64	65.55	26.0	28.94
+checkpoint-900	TCoT	33.84	70.72	32.0	32.1
+checkpoint-900	PoT	37.39	47.57	30.0	23.32

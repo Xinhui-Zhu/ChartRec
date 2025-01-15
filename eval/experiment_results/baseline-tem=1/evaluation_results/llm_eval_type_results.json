@@ -1,0 +1,149 @@
+{
+    "TableLLM-Llama3.1-8B/PoT": {
+        "NumericalReasoning": {
+            "F1": 31.93,
+            "EM": 25.44,
+            "ROUGE-L": 26.21,
+            "SacreBLEU": 9.99,
+            "total": 397,
+            "ECR@1": 74.31,
+            "Parse@1": 48.11
+        },
+        "FactChecking": {
+            "F1": 33.02,
+            "EM": 21.88,
+            "ROUGE-L": 23.05,
+            "SacreBLEU": 13.32,
+            "total": 96,
+            "ECR@1": 65.62,
+            "Parse@1": 28.12
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 54.0,
+            "Pass@1": 20.0,
+            "Parse@1": 52.0
+        },
+        "DataAnalysis": {
+            "F1": 15.57,
+            "EM": 12.24,
+            "ROUGE-L": 17.4,
+            "SacreBLEU": 3.4,
+            "total": 343,
+            "ECR@1": 59.18,
+            "Parse@1": 29.45
+        }
+    },
+    "TableLLM-Llama3.1-8B/DP": {
+        "NumericalReasoning": {
+            "F1": 21.55,
+            "EM": 12.34,
+            "ROUGE-L": 16.41,
+            "SacreBLEU": 15.55,
+            "total": 397,
+            "Parse@1": 100.0
+        },
+        "FactChecking": {
+            "F1": 61.54,
+            "EM": 50.0,
+            "ROUGE-L": 63.19,
+            "SacreBLEU": 52.26,
+            "total": 96,
+            "Parse@1": 100.0
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 64.0,
+            "Pass@1": 24.0,
+            "Parse@1": 62.0
+        },
+        "DataAnalysis": {
+            "F1": 27.87,
+            "EM": 4.66,
+            "ROUGE-L": 28.94,
+            "SacreBLEU": 3.98,
+            "total": 343,
+            "Parse@1": 100.0
+        }
+    },
+    "TableLLM-Llama3.1-8B/TCoT": {
+        "NumericalReasoning": {
+            "F1": 31.36,
+            "EM": 26.7,
+            "ROUGE-L": 30.4,
+            "SacreBLEU": 15.39,
+            "total": 397,
+            "Parse@1": 100.0
+        },
+        "FactChecking": {
+            "F1": 62.3,
+            "EM": 53.12,
+            "ROUGE-L": 65.09,
+            "SacreBLEU": 51.12,
+            "total": 96,
+            "Parse@1": 100.0
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 48.0,
+            "Pass@1": 20.0,
+            "Parse@1": 46.0
+        },
+        "DataAnalysis": {
+            "F1": 39.63,
+            "EM": 7.29,
+            "ROUGE-L": 32.69,
+            "SacreBLEU": 13.19,
+            "total": 343,
+            "Parse@1": 97.96
+        }
+    },
+    "TableLLM-Llama3.1-8B/SCoT": {
+        "NumericalReasoning": {
+            "F1": 19.93,
+            "EM": 12.34,
+            "ROUGE-L": 16.06,
+            "SacreBLEU": 12.38,
+            "total": 397,
+            "Parse@1": 100.0
+        },
+        "FactChecking": {
+            "F1": 61.58,
+            "EM": 58.33,
+            "ROUGE-L": 66.75,
+            "SacreBLEU": 50.35,
+            "total": 96,
+            "Parse@1": 100.0
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 54.0,
+            "Pass@1": 12.0,
+            "Parse@1": 54.0
+        },
+        "DataAnalysis": {
+            "F1": 38.33,
+            "EM": 4.08,
+            "ROUGE-L": 30.08,
+            "SacreBLEU": 12.1,
+            "total": 343,
+            "Parse@1": 99.71
+        }
+    }
+}

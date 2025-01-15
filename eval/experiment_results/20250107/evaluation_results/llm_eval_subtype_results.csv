@@ -1,5 +1,0 @@
-model_name	prompt_type	NumericalReasoning_Aggregation	FactChecking_MatchBased	Visualization_ChartGeneration	DataAnalysis_ImpactAnalysis	DataAnalysis_CausalAnalysis	NumericalReasoning_Multi-hop NumericalReasoing	FactChecking_Multi-hop FactChecking	NumericalReasoning_Counting	DataAnalysis_DescriptiveAnalysis	DataAnalysis_AnomalyDetection	NumericalReasoning_Domain-Specific	NumericalReasoning_Time-basedCalculation	NumericalReasoning_ArithmeticCalculation	DataAnalysis_CorrelationAnalysis	NumericalReasoning_Ranking	DataAnalysis_TrendForecasting	DataAnalysis_StatisticalAnalysis	NumericalReasoning_Comparison
-checkpoint-300	DP	6.0	75.85	20.0	39.47	36.66	2.19	45.3	20.0	26.25	30.04	23.13	7.45	10.0	48.54	32.0	18.19	9.72	22.89
-checkpoint-300	PoT	17.33	73.19	20.0	6.0	8.22	13.73	25.0	44.0	11.11	1.72	26.43	6.38	26.0	72.32	32.84	5.0	6.0	33.6
-checkpoint-300	SCoT	2.0	82.61	22.0	41.65	47.3	4.15	43.0	12.0	22.86	19.33	20.44	9.57	20.0	44.0	34.02	16.2	8.56	31.11
-checkpoint-300	TCoT	8.0	82.61	26.0	38.53	50.81	8.82	37.96	28.0	24.96	23.0	35.9	25.94	36.0	42.36	60.31	15.28	4.33	47.04

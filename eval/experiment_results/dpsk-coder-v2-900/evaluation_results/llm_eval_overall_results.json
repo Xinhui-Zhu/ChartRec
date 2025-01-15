@@ -1,0 +1,23 @@
+{
+    "checkpoint-900/DP": {
+        "total": 886,
+        "MIX_Metric": 28.79,
+        "Parse@1": 98.08
+    },
+    "checkpoint-900/SCoT": {
+        "total": 886,
+        "MIX_Metric": 29.88,
+        "Parse@1": 92.78
+    },
+    "checkpoint-900/TCoT": {
+        "total": 886,
+        "MIX_Metric": 36.97,
+        "Parse@1": 96.61
+    },
+    "checkpoint-900/PoT": {
+        "total": 886,
+        "MIX_Metric": 32.7,
+        "ECR@1": 76.86,
+        "Parse@1": 60.05
+    }
+}

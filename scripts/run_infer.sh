@@ -9,7 +9,9 @@ export TRITON_CACHE=/proj/arise/arise/xz3276/data
 
 # MODEL_DIR='ckpt/llama-3-1-8b-v2'
 # MODEL_DIR='Multilingual-Multimodal-NLP/TableLLM-Llama3.1-8B'
-MODEL_DIR='ckpt/dpsk-coder-v2/checkpoint-300'
+MODEL_DIR='ckpt/dpsk-coder-v2/checkpoint-900'
+
+EXP_VERSION="dpsk-coder-v2-700"
 
 python inference/infer.py \
     --data_path $DATA_PATH \
@@ -17,10 +19,9 @@ python inference/infer.py \
     --task 'tablebench'  \
     --temperature 0 \
     --sample_n 1 \
-    --outdir eval/experiment_results/20250107/outputs_size/2
+    --outdir eval/experiment_results/${EXP_VERSION}/outputs_size/2
 
-python eval/batch_parse_response_script.py --exp_version '20250107'
-python eval/batch_eval_response_script.py --exp_version '20250107'
-
+python eval/batch_parse_response_script.py --exp_version ${EXP_VERSION}
+python eval/batch_eval_response_script.py --exp_version ${EXP_VERSION}
 
 

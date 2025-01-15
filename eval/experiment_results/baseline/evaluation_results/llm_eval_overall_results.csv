@@ -1,0 +1,5 @@
+model_name	prompt_type	overall	Parse@1
+TableLLM-Llama3.1-8B	PoT	26.12	46.05
+TableLLM-Llama3.1-8B	DP	27.95	97.97
+TableLLM-Llama3.1-8B	TCoT	35.29	96.73
+TableLLM-Llama3.1-8B	SCoT	27.71	96.5

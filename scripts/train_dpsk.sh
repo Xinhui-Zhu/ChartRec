@@ -21,7 +21,7 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" python -m torch.distributed.launch --master_addr 
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --use_cot false \
-    --save_steps 100 \
+    --save_steps 50 \
     --save_total_limit 40 \
     --learning_rate 2e-5 \
     --weight_decay 0. \

@@ -1,0 +1,149 @@
+{
+    "checkpoint-900/DP": {
+        "NumericalReasoning": {
+            "F1": 22.6,
+            "EM": 13.85,
+            "ROUGE-L": 18.1,
+            "SacreBLEU": 14.13,
+            "total": 397,
+            "Parse@1": 99.75
+        },
+        "FactChecking": {
+            "F1": 63.47,
+            "EM": 62.5,
+            "ROUGE-L": 70.23,
+            "SacreBLEU": 51.37,
+            "total": 96,
+            "Parse@1": 100.0
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 72.0,
+            "Pass@1": 26.0,
+            "Parse@1": 70.0
+        },
+        "DataAnalysis": {
+            "F1": 38.25,
+            "EM": 4.96,
+            "ROUGE-L": 29.9,
+            "SacreBLEU": 10.86,
+            "total": 343,
+            "Parse@1": 99.71
+        }
+    },
+    "checkpoint-900/SCoT": {
+        "NumericalReasoning": {
+            "F1": 25.84,
+            "EM": 18.39,
+            "ROUGE-L": 22.64,
+            "SacreBLEU": 15.46,
+            "total": 397,
+            "Parse@1": 96.98
+        },
+        "FactChecking": {
+            "F1": 59.39,
+            "EM": 55.21,
+            "ROUGE-L": 65.55,
+            "SacreBLEU": 48.49,
+            "total": 96,
+            "Parse@1": 90.62
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 66.0,
+            "Pass@1": 26.0,
+            "Parse@1": 64.0
+        },
+        "DataAnalysis": {
+            "F1": 37.22,
+            "EM": 3.5,
+            "ROUGE-L": 28.94,
+            "SacreBLEU": 13.05,
+            "total": 343,
+            "Parse@1": 92.71
+        }
+    },
+    "checkpoint-900/TCoT": {
+        "NumericalReasoning": {
+            "F1": 37.16,
+            "EM": 29.22,
+            "ROUGE-L": 33.84,
+            "SacreBLEU": 27.26,
+            "total": 397,
+            "Parse@1": 99.5
+        },
+        "FactChecking": {
+            "F1": 66.85,
+            "EM": 61.46,
+            "ROUGE-L": 70.72,
+            "SacreBLEU": 59.9,
+            "total": 96,
+            "Parse@1": 97.92
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 80.0,
+            "Pass@1": 32.0,
+            "Parse@1": 76.0
+        },
+        "DataAnalysis": {
+            "F1": 34.03,
+            "EM": 4.96,
+            "ROUGE-L": 32.1,
+            "SacreBLEU": 8.62,
+            "total": 343,
+            "Parse@1": 95.92
+        }
+    },
+    "checkpoint-900/PoT": {
+        "NumericalReasoning": {
+            "F1": 41.07,
+            "EM": 34.76,
+            "ROUGE-L": 37.39,
+            "SacreBLEU": 20.32,
+            "total": 397,
+            "ECR@1": 85.14,
+            "Parse@1": 74.56
+        },
+        "FactChecking": {
+            "F1": 59.71,
+            "EM": 43.75,
+            "ROUGE-L": 47.57,
+            "SacreBLEU": 51.17,
+            "total": 96,
+            "ECR@1": 73.96,
+            "Parse@1": 56.25
+        },
+        "Visualization": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 62.0,
+            "Pass@1": 30.0,
+            "Parse@1": 60.0
+        },
+        "DataAnalysis": {
+            "F1": 17.51,
+            "EM": 16.91,
+            "ROUGE-L": 23.32,
+            "SacreBLEU": 4.49,
+            "total": 343,
+            "ECR@1": 70.26,
+            "Parse@1": 44.31
+        }
+    }
+}

@@ -11,6 +11,19 @@ from transformers import Trainer
 import json
 import wandb
 
+class CustomTrainer(Trainer):
+    def training_step(self, model, inputs):
+        try:
+            return super().training_step(model, inputs)  # 调用原始的 training_step 方法
+        except RuntimeError as e:
+            if "out of memory" in str(e):
+                print("Out of memory error, skipping batch...")
+                torch.cuda.empty_cache()  # 清空 GPU 缓存
+                return None  # 返回空结果以跳过当前批次
+            else:
+                raise e  # 对其他错误，直接抛出
+
+
 def _make_r_io_base(f, mode: str):
     if not isinstance(f, io.IOBase):
         f = open(f, mode=mode)
