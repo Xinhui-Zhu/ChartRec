@@ -1,0 +1,5 @@
+model_name	prompt_type	NumericalReasoning	FactChecking	Visualization	DataAnalysis
+checkpoint-1418	SCoT	24.73	67.74	22.0	28.25
+checkpoint-1418	DP	18.06	72.12	32.0	30.22
+checkpoint-1418	PoT	38.12	53.82	30.0	24.79
+checkpoint-1418	TCoT	37.37	70.85	24.0	32.62

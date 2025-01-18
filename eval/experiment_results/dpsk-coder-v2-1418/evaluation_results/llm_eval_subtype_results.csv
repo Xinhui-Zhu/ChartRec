@@ -1,0 +1,5 @@
+model_name	prompt_type	NumericalReasoning_Aggregation	FactChecking_MatchBased	Visualization_ChartGeneration	DataAnalysis_ImpactAnalysis	DataAnalysis_CausalAnalysis	NumericalReasoning_Multi-hop NumericalReasoing	FactChecking_Multi-hop FactChecking	NumericalReasoning_Counting	DataAnalysis_DescriptiveAnalysis	DataAnalysis_AnomalyDetection	NumericalReasoning_Domain-Specific	NumericalReasoning_Time-basedCalculation	NumericalReasoning_ArithmeticCalculation	DataAnalysis_CorrelationAnalysis	NumericalReasoning_Ranking	DataAnalysis_TrendForecasting	DataAnalysis_StatisticalAnalysis	NumericalReasoning_Comparison
+checkpoint-1418	SCoT	6.0	87.01	22.0	39.41	46.85	6.11	49.47	24.0	24.14	22.02	24.15	14.87	26.0	47.84	49.35	12.98	5.29	47.72
+checkpoint-1418	DP	2.0	90.1	32.0	35.43	42.16	1.96	54.95	16.0	26.85	32.7	28.64	7.8	10.0	48.05	45.72	19.2	9.14	32.57
+checkpoint-1418	PoT	34.0	84.06	30.0	45.67	23.16	14.12	26.17	56.0	5.4	2.97	40.82	29.79	45.33	74.48	38.73	6.8	15.0	46.8
+checkpoint-1418	TCoT	14.0	92.81	24.0	50.07	46.1	13.96	50.56	28.0	28.68	26.65	44.02	29.79	42.0	47.77	65.48	20.52	9.39	63.95

@@ -9,9 +9,9 @@ export TRITON_CACHE=/proj/arise/arise/xz3276/data
 
 # MODEL_DIR='ckpt/llama-3-1-8b-v2'
 # MODEL_DIR='Multilingual-Multimodal-NLP/TableLLM-Llama3.1-8B'
-MODEL_DIR='ckpt/dpsk-coder-v2/checkpoint-900'
+MODEL_DIR='ckpt/dpsk-coder-v2/checkpoint-1418'
 
-EXP_VERSION="dpsk-coder-v2-900"
+EXP_VERSION="dpsk-coder-v2-1418"
 
 python inference/infer.py \
     --data_path $DATA_PATH \

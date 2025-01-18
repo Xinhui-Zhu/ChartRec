@@ -1,0 +1,23 @@
+{
+    "checkpoint-1418/SCoT": {
+        "total": 886,
+        "MIX_Metric": 30.65,
+        "Parse@1": 91.53
+    },
+    "checkpoint-1418/DP": {
+        "total": 886,
+        "MIX_Metric": 29.52,
+        "Parse@1": 98.65
+    },
+    "checkpoint-1418/PoT": {
+        "total": 886,
+        "MIX_Metric": 34.28,
+        "ECR@1": 74.83,
+        "Parse@1": 61.85
+    },
+    "checkpoint-1418/TCoT": {
+        "total": 886,
+        "MIX_Metric": 38.45,
+        "Parse@1": 96.5
+    }
+}

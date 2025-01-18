@@ -1,0 +1,611 @@
+{
+    "checkpoint-1418/SCoT": {
+        "NumericalReasoning_Aggregation": {
+            "F1": 5.71,
+            "EM": 6.0,
+            "ROUGE-L": 6.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "FactChecking_MatchBased": {
+            "F1": 87.25,
+            "EM": 80.43,
+            "ROUGE-L": 87.01,
+            "SacreBLEU": 77.28,
+            "total": 46,
+            "Parse@1": 95.65
+        },
+        "Visualization_ChartGeneration": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 46.0,
+            "Pass@1": 22.0,
+            "Parse@1": 44.0
+        },
+        "DataAnalysis_ImpactAnalysis": {
+            "F1": 35.4,
+            "EM": 16.0,
+            "ROUGE-L": 39.41,
+            "SacreBLEU": 14.38,
+            "total": 50,
+            "Parse@1": 92.0
+        },
+        "DataAnalysis_CausalAnalysis": {
+            "F1": 58.13,
+            "EM": 0.0,
+            "ROUGE-L": 46.85,
+            "SacreBLEU": 31.19,
+            "total": 45,
+            "Parse@1": 95.56
+        },
+        "NumericalReasoning_Multi-hop NumericalReasoing": {
+            "F1": 3.23,
+            "EM": 3.92,
+            "ROUGE-L": 6.11,
+            "SacreBLEU": 2.17,
+            "total": 51,
+            "Parse@1": 100.0
+        },
+        "FactChecking_Multi-hop FactChecking": {
+            "F1": 54.55,
+            "EM": 36.0,
+            "ROUGE-L": 49.47,
+            "SacreBLEU": 57.37,
+            "total": 50,
+            "Parse@1": 90.0
+        },
+        "NumericalReasoning_Counting": {
+            "F1": 25.0,
+            "EM": 24.0,
+            "ROUGE-L": 24.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 92.0
+        },
+        "DataAnalysis_DescriptiveAnalysis": {
+            "F1": 34.1,
+            "EM": 0.0,
+            "ROUGE-L": 24.14,
+            "SacreBLEU": 9.51,
+            "total": 51,
+            "Parse@1": 86.27
+        },
+        "DataAnalysis_AnomalyDetection": {
+            "F1": 33.02,
+            "EM": 0.0,
+            "ROUGE-L": 22.02,
+            "SacreBLEU": 9.61,
+            "total": 47,
+            "Parse@1": 85.11
+        },
+        "NumericalReasoning_Domain-Specific": {
+            "F1": 34.02,
+            "EM": 16.33,
+            "ROUGE-L": 24.15,
+            "SacreBLEU": 30.89,
+            "total": 49,
+            "Parse@1": 95.92
+        },
+        "NumericalReasoning_Time-basedCalculation": {
+            "F1": 15.0,
+            "EM": 12.77,
+            "ROUGE-L": 14.87,
+            "SacreBLEU": 0.0,
+            "total": 47,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_ArithmeticCalculation": {
+            "F1": 26.26,
+            "EM": 26.0,
+            "ROUGE-L": 26.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 96.0
+        },
+        "DataAnalysis_CorrelationAnalysis": {
+            "F1": 50.0,
+            "EM": 0.0,
+            "ROUGE-L": 47.84,
+            "SacreBLEU": 13.63,
+            "total": 50,
+            "Parse@1": 90.0
+        },
+        "NumericalReasoning_Ranking": {
+            "F1": 41.52,
+            "EM": 32.0,
+            "ROUGE-L": 49.35,
+            "SacreBLEU": 16.34,
+            "total": 50,
+            "Parse@1": 98.0
+        },
+        "DataAnalysis_TrendForecasting": {
+            "F1": 17.54,
+            "EM": 6.0,
+            "ROUGE-L": 12.98,
+            "SacreBLEU": 12.96,
+            "total": 50,
+            "Parse@1": 94.0
+        },
+        "DataAnalysis_StatisticalAnalysis": {
+            "F1": 9.93,
+            "EM": 2.0,
+            "ROUGE-L": 5.29,
+            "SacreBLEU": 6.26,
+            "total": 50,
+            "Parse@1": 96.0
+        },
+        "NumericalReasoning_Comparison": {
+            "F1": 44.69,
+            "EM": 38.0,
+            "ROUGE-L": 47.72,
+            "SacreBLEU": 17.71,
+            "total": 50,
+            "Parse@1": 98.0
+        }
+    },
+    "checkpoint-1418/DP": {
+        "NumericalReasoning_Aggregation": {
+            "F1": 1.43,
+            "EM": 2.0,
+            "ROUGE-L": 2.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "FactChecking_MatchBased": {
+            "F1": 89.66,
+            "EM": 86.96,
+            "ROUGE-L": 90.1,
+            "SacreBLEU": 70.91,
+            "total": 46,
+            "Parse@1": 100.0
+        },
+        "Visualization_ChartGeneration": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 84.0,
+            "Pass@1": 32.0,
+            "Parse@1": 82.0
+        },
+        "DataAnalysis_ImpactAnalysis": {
+            "F1": 34.76,
+            "EM": 12.0,
+            "ROUGE-L": 35.43,
+            "SacreBLEU": 10.88,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_CausalAnalysis": {
+            "F1": 51.88,
+            "EM": 0.0,
+            "ROUGE-L": 42.16,
+            "SacreBLEU": 27.92,
+            "total": 45,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Multi-hop NumericalReasoing": {
+            "F1": 1.45,
+            "EM": 1.96,
+            "ROUGE-L": 1.96,
+            "SacreBLEU": 1.61,
+            "total": 51,
+            "Parse@1": 100.0
+        },
+        "FactChecking_Multi-hop FactChecking": {
+            "F1": 52.09,
+            "EM": 46.0,
+            "ROUGE-L": 54.95,
+            "SacreBLEU": 47.25,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Counting": {
+            "F1": 16.16,
+            "EM": 16.0,
+            "ROUGE-L": 16.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 98.0
+        },
+        "DataAnalysis_DescriptiveAnalysis": {
+            "F1": 35.0,
+            "EM": 0.0,
+            "ROUGE-L": 26.85,
+            "SacreBLEU": 6.91,
+            "total": 51,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_AnomalyDetection": {
+            "F1": 22.96,
+            "EM": 6.38,
+            "ROUGE-L": 32.7,
+            "SacreBLEU": 2.59,
+            "total": 47,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Domain-Specific": {
+            "F1": 36.46,
+            "EM": 22.45,
+            "ROUGE-L": 28.64,
+            "SacreBLEU": 30.79,
+            "total": 49,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Time-basedCalculation": {
+            "F1": 9.43,
+            "EM": 6.38,
+            "ROUGE-L": 7.8,
+            "SacreBLEU": 0.0,
+            "total": 47,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_ArithmeticCalculation": {
+            "F1": 9.8,
+            "EM": 10.0,
+            "ROUGE-L": 10.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_CorrelationAnalysis": {
+            "F1": 48.68,
+            "EM": 2.0,
+            "ROUGE-L": 48.05,
+            "SacreBLEU": 15.1,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Ranking": {
+            "F1": 43.36,
+            "EM": 28.0,
+            "ROUGE-L": 45.72,
+            "SacreBLEU": 20.16,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_TrendForecasting": {
+            "F1": 21.9,
+            "EM": 10.0,
+            "ROUGE-L": 19.2,
+            "SacreBLEU": 15.07,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_StatisticalAnalysis": {
+            "F1": 14.29,
+            "EM": 2.0,
+            "ROUGE-L": 9.14,
+            "SacreBLEU": 6.85,
+            "total": 50,
+            "Parse@1": 96.0
+        },
+        "NumericalReasoning_Comparison": {
+            "F1": 33.17,
+            "EM": 22.0,
+            "ROUGE-L": 32.57,
+            "SacreBLEU": 12.7,
+            "total": 50,
+            "Parse@1": 100.0
+        }
+    },
+    "checkpoint-1418/PoT": {
+        "NumericalReasoning_Aggregation": {
+            "F1": 35.05,
+            "EM": 34.0,
+            "ROUGE-L": 34.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "ECR@1": 92.0,
+            "Parse@1": 90.0
+        },
+        "FactChecking_MatchBased": {
+            "F1": 90.65,
+            "EM": 80.43,
+            "ROUGE-L": 84.06,
+            "SacreBLEU": 77.72,
+            "total": 46,
+            "ECR@1": 95.65,
+            "Parse@1": 86.96
+        },
+        "Visualization_ChartGeneration": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 56.0,
+            "Pass@1": 30.0,
+            "Parse@1": 54.0
+        },
+        "DataAnalysis_ImpactAnalysis": {
+            "F1": 46.51,
+            "EM": 34.0,
+            "ROUGE-L": 45.67,
+            "SacreBLEU": 17.19,
+            "total": 50,
+            "ECR@1": 76.0,
+            "Parse@1": 74.0
+        },
+        "DataAnalysis_CausalAnalysis": {
+            "F1": 35.56,
+            "EM": 0.0,
+            "ROUGE-L": 23.16,
+            "SacreBLEU": 13.23,
+            "total": 45,
+            "ECR@1": 93.33,
+            "Parse@1": 44.44
+        },
+        "NumericalReasoning_Multi-hop NumericalReasoing": {
+            "F1": 13.46,
+            "EM": 13.73,
+            "ROUGE-L": 14.12,
+            "SacreBLEU": 2.96,
+            "total": 51,
+            "ECR@1": 80.39,
+            "Parse@1": 72.55
+        },
+        "FactChecking_Multi-hop FactChecking": {
+            "F1": 41.67,
+            "EM": 22.0,
+            "ROUGE-L": 26.17,
+            "SacreBLEU": 41.93,
+            "total": 50,
+            "ECR@1": 54.0,
+            "Parse@1": 40.0
+        },
+        "NumericalReasoning_Counting": {
+            "F1": 61.54,
+            "EM": 56.0,
+            "ROUGE-L": 56.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "ECR@1": 82.0,
+            "Parse@1": 82.0
+        },
+        "DataAnalysis_DescriptiveAnalysis": {
+            "F1": 14.07,
+            "EM": 0.0,
+            "ROUGE-L": 5.4,
+            "SacreBLEU": 1.88,
+            "total": 51,
+            "ECR@1": 70.59,
+            "Parse@1": 17.65
+        },
+        "DataAnalysis_AnomalyDetection": {
+            "F1": 8.37,
+            "EM": 0.0,
+            "ROUGE-L": 2.97,
+            "SacreBLEU": 0.65,
+            "total": 47,
+            "ECR@1": 59.57,
+            "Parse@1": 17.02
+        },
+        "NumericalReasoning_Domain-Specific": {
+            "F1": 51.25,
+            "EM": 38.78,
+            "ROUGE-L": 40.82,
+            "SacreBLEU": 45.08,
+            "total": 49,
+            "ECR@1": 75.51,
+            "Parse@1": 69.39
+        },
+        "NumericalReasoning_Time-basedCalculation": {
+            "F1": 34.57,
+            "EM": 29.79,
+            "ROUGE-L": 29.79,
+            "SacreBLEU": 0.0,
+            "total": 47,
+            "ECR@1": 68.09,
+            "Parse@1": 57.45
+        },
+        "NumericalReasoning_ArithmeticCalculation": {
+            "F1": 48.94,
+            "EM": 44.0,
+            "ROUGE-L": 45.33,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "ECR@1": 90.0,
+            "Parse@1": 84.0
+        },
+        "DataAnalysis_CorrelationAnalysis": {
+            "F1": 82.39,
+            "EM": 66.0,
+            "ROUGE-L": 74.48,
+            "SacreBLEU": 71.34,
+            "total": 50,
+            "ECR@1": 80.0,
+            "Parse@1": 80.0
+        },
+        "NumericalReasoning_Ranking": {
+            "F1": 39.53,
+            "EM": 24.0,
+            "ROUGE-L": 38.73,
+            "SacreBLEU": 15.0,
+            "total": 50,
+            "ECR@1": 88.0,
+            "Parse@1": 74.0
+        },
+        "DataAnalysis_TrendForecasting": {
+            "F1": 15.09,
+            "EM": 4.0,
+            "ROUGE-L": 6.8,
+            "SacreBLEU": 9.59,
+            "total": 50,
+            "ECR@1": 32.0,
+            "Parse@1": 26.0
+        },
+        "DataAnalysis_StatisticalAnalysis": {
+            "F1": 18.33,
+            "EM": 14.0,
+            "ROUGE-L": 15.0,
+            "SacreBLEU": 9.23,
+            "total": 50,
+            "ECR@1": 80.0,
+            "Parse@1": 74.0
+        },
+        "NumericalReasoning_Comparison": {
+            "F1": 42.65,
+            "EM": 42.0,
+            "ROUGE-L": 46.8,
+            "SacreBLEU": 5.65,
+            "total": 50,
+            "ECR@1": 76.0,
+            "Parse@1": 68.0
+        }
+    },
+    "checkpoint-1418/TCoT": {
+        "NumericalReasoning_Aggregation": {
+            "F1": 10.37,
+            "EM": 14.0,
+            "ROUGE-L": 14.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "FactChecking_MatchBased": {
+            "F1": 89.93,
+            "EM": 89.13,
+            "ROUGE-L": 92.81,
+            "SacreBLEU": 77.87,
+            "total": 46,
+            "Parse@1": 100.0
+        },
+        "Visualization_ChartGeneration": {
+            "F1": 0,
+            "EM": 0,
+            "ROUGE-L": 0,
+            "SacreBLEU": 0,
+            "total": 50,
+            "ECR@1": 66.0,
+            "Pass@1": 24.0,
+            "Parse@1": 62.0
+        },
+        "DataAnalysis_ImpactAnalysis": {
+            "F1": 48.05,
+            "EM": 20.0,
+            "ROUGE-L": 50.07,
+            "SacreBLEU": 25.12,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_CausalAnalysis": {
+            "F1": 53.66,
+            "EM": 0.0,
+            "ROUGE-L": 46.1,
+            "SacreBLEU": 29.53,
+            "total": 45,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Multi-hop NumericalReasoing": {
+            "F1": 11.29,
+            "EM": 11.76,
+            "ROUGE-L": 13.96,
+            "SacreBLEU": 2.96,
+            "total": 51,
+            "Parse@1": 100.0
+        },
+        "FactChecking_Multi-hop FactChecking": {
+            "F1": 51.14,
+            "EM": 40.0,
+            "ROUGE-L": 50.56,
+            "SacreBLEU": 47.17,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Counting": {
+            "F1": 24.78,
+            "EM": 28.0,
+            "ROUGE-L": 28.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 96.0
+        },
+        "DataAnalysis_DescriptiveAnalysis": {
+            "F1": 36.51,
+            "EM": 0.0,
+            "ROUGE-L": 28.68,
+            "SacreBLEU": 8.29,
+            "total": 51,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_AnomalyDetection": {
+            "F1": 28.63,
+            "EM": 0.0,
+            "ROUGE-L": 26.65,
+            "SacreBLEU": 4.99,
+            "total": 47,
+            "Parse@1": 97.87
+        },
+        "NumericalReasoning_Domain-Specific": {
+            "F1": 50.53,
+            "EM": 38.78,
+            "ROUGE-L": 44.02,
+            "SacreBLEU": 55.03,
+            "total": 49,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_Time-basedCalculation": {
+            "F1": 27.27,
+            "EM": 27.66,
+            "ROUGE-L": 29.79,
+            "SacreBLEU": 0.0,
+            "total": 47,
+            "Parse@1": 100.0
+        },
+        "NumericalReasoning_ArithmeticCalculation": {
+            "F1": 42.0,
+            "EM": 42.0,
+            "ROUGE-L": 42.0,
+            "SacreBLEU": 0.0,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_CorrelationAnalysis": {
+            "F1": 49.59,
+            "EM": 0.0,
+            "ROUGE-L": 47.77,
+            "SacreBLEU": 13.35,
+            "total": 50,
+            "Parse@1": 96.0
+        },
+        "NumericalReasoning_Ranking": {
+            "F1": 55.36,
+            "EM": 46.0,
+            "ROUGE-L": 65.48,
+            "SacreBLEU": 29.05,
+            "total": 50,
+            "Parse@1": 100.0
+        },
+        "DataAnalysis_TrendForecasting": {
+            "F1": 22.94,
+            "EM": 12.0,
+            "ROUGE-L": 20.52,
+            "SacreBLEU": 14.61,
+            "total": 50,
+            "Parse@1": 96.0
+        },
+        "DataAnalysis_StatisticalAnalysis": {
+            "F1": 13.89,
+            "EM": 4.0,
+            "ROUGE-L": 9.39,
+            "SacreBLEU": 6.85,
+            "total": 50,
+            "Parse@1": 90.0
+        },
+        "NumericalReasoning_Comparison": {
+            "F1": 53.33,
+            "EM": 52.0,
+            "ROUGE-L": 63.95,
+            "SacreBLEU": 17.33,
+            "total": 50,
+            "Parse@1": 100.0
+        }
+    }
+}

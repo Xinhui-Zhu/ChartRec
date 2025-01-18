@@ -14,7 +14,7 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" python -m torch.distributed.launch --master_addr 
     --data_path $DATA_PATH \
     --bf16 True \
     --output_dir $SAVE_PATH \
-    --num_train_epochs 1 \
+    --num_train_epochs 3 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 16 \
@@ -34,7 +34,7 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" python -m torch.distributed.launch --master_addr 
     --cache_dir /proj/arise/arise/xz3276/model \
     --report_to "wandb" \
     --logging_steps 1 \
-    --resume_from_checkpoint ckpt/dpsk-coder-v2/checkpoint-900
+    --resume_from_checkpoint ckpt/dpsk-coder-v2/checkpoint-1418
 
 # DATA_PATH='./data/v2/trainset_size_exp/TableBench_instructions_trainset_7838.jsonl'
 # SAVE_PATH='./ckpt/dpsk-coder-v2-part-8k/'

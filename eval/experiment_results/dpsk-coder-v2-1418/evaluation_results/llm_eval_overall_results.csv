@@ -1,0 +1,5 @@
+model_name	prompt_type	overall	Parse@1
+checkpoint-1418	SCoT	30.65	91.53
+checkpoint-1418	DP	29.52	98.65
+checkpoint-1418	PoT	34.28	61.85
+checkpoint-1418	TCoT	38.45	96.5
